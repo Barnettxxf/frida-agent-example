@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+if [[ "$1" = '' ]]
+then 
+    echo "Usage: ./hook <pacakge_name>"
+    exit 1
+fi
+frida -U -f $1 --no-pause -l _agent.js

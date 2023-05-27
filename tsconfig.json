@@ -5,6 +5,10 @@
     "allowJs": true,
     "noEmit": true,
     "strict": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "frida": ["node_modules/frida/dist/index"]
+    }
+  },
 }

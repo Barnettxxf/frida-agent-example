@@ -9,7 +9,8 @@
     "build": "frida-compile agent/index.ts -o _agent.js -c",
     "agent": "frida-compile agent/index.ts -o _agent.js -w",
     "yuanrenxueapp_q1": "frida-compile yuerenxueapp/q1/index.ts -o _agent.js -w",
-    "yuanrenxueapp_q2": "frida-compile yuerenxueapp/q2/index.ts -o _agent.js -w"
+    "yuanrenxueapp_q2": "frida-compile yuerenxueapp/q2/index.ts -o _agent.js -w",
+    "f_yrx": "frida -U -f com.yuanrenxue.match2022 -l _agent.js"
   },
   "devDependencies": {
     "@types/frida-gum": "^18.1.0",

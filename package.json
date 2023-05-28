@@ -6,13 +6,15 @@
   "main": "agent/index.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "frida-compile agent/index.ts -o _agent.js -c",
-    "watch": "frida-compile agent/index.ts -o _agent.js -w"
+    "agent": "frida-compile agent/index.ts -o _agent.js -w",
+    "yuanrenxueapp_q1": "frida-compile yuerenxueapp/q1/index.ts -o _agent.js -w",
+    "yuanrenxueapp_q2": "frida-compile yuerenxueapp/q2/index.ts -o _agent.js -w"
   },
   "devDependencies": {
     "@types/frida-gum": "^18.1.0",
     "@types/node": "^18.0.6",
-    "frida-compile": "^15.0.8"
+    "frida-compile": "^15.0.8",
+    "ts-node": "^10.9.1"
   },
   "dependencies": {
     "frida": "^16.0.19"

@@ -22,7 +22,8 @@ function onError(error: Error) {
     const source = await readFile(path.join(__dirname, '_agent.js'), 'utf8');
     const device: Device = await getUsbDevice();
     const process = await device.getProcess("猿人学2022");
-    const session = await attach(process.pid);
+    print('Process: ' + process.pid + ' ' + process.name)
+    const session = await attach(process.name);
     const script = await session.createScript(source)
     script.message.connect(onMessage);
     print('[*] Running CTF')
